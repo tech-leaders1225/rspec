@@ -4,9 +4,11 @@ FactoryBot.define do
     sequence(:content) { |n| "テストコンテンツ#{n}" }
     sequence(:post_date) { DateTime.current }
     
+    ## この部分を追加↓
     trait :invalid do
       name { nil }
     end
+    ##
     
   end
   
